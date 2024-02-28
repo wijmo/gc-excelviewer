@@ -1,5 +1,6 @@
 # Excel Viewer
-Powered by [Wijmo](http://www.grapecity.com/wijmo), this extension provides custom editors and previews for CSV files and Excel spreadsheets in Visual Studio Code and [Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web).
+
+Powered by [Wijmo](https://developer.mescius.com/wijmo), this extension provides custom editors and previews for CSV files and Excel spreadsheets in Visual Studio Code and [Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web).
 
 > **Version 4.2.58 fixes many CSV editing issues that occurred in files containing multiline cells.**
 
@@ -10,7 +11,8 @@ Version 4.2 also supports **Visual Studio Code for the Web**. To get started, vi
 > This extension requires Visual Studio Code 1.63.0 or greater.
 
 ## CSV Usage
-For files with a .csv, .tsv, or .tab extension, use the explorer context menu or editor title menu to invoke the `Open Preview` command. The contents of the file will be displayed in a [FlexGrid](http://demos.wijmo.com/5/Angular/Explorer/Explorer/#/grid/intro) control, which supports sorting and filtering via its column headers. You can also use the `Open With` command on the explorer context menu to open a custom editor, as shown here:
+
+For files with a .csv, .tsv, or .tab extension, use the explorer context menu or editor title menu to invoke the `Open Preview` command. The contents of the file will be displayed in a [FlexGrid](https://developer.mescius.com/wijmo/demos/Grid/Overview/purejs) control, which supports sorting and filtering via its column headers. You can also use the `Open With` command on the explorer context menu to open a custom editor, as shown here:
 
 ![Image](./img/csv-preview-4.gif)
 
@@ -21,23 +23,27 @@ For .tsv and .tab files, a tab delimiter is assumed. For plain text files with d
 To sort a column in ascending order, click its column header. To reverse the sort order, click its column header again. To specify a secondary sort column, hold the `Shift` key while clicking its column header. To undo sorting for a column, hold the `Ctrl` key while clicking its column header. Alternatively, you can use the `CSV: Clear Preview State` command to remove all sort/filter criteria for the current file.
 
 ## Excel Usage
-For files with an .xlsx or .xlsm extension, just click (or double-click) the filename in explorer view. The contents of the file will be displayed in a [FlexSheet](http://demos.wijmo.com/5/Angular/FlexSheetExplorer/FlexSheetExplorer/#/intro) control. If multiple sheets are present, use the controls at the bottom of the view for navigation.
+
+For files with an .xlsx or .xlsm extension, just click (or double-click) the filename in explorer view. The contents of the file will be displayed in a [FlexSheet](https://developer.mescius.com/wijmo/demos/Grid/FlexSheet/ExcelImportExport/purejs) control. If multiple sheets are present, use the controls at the bottom of the view for navigation.
 
 ![Image](./img/excel-preview-4.gif)
 
 As in earlier versions, you can use the explorer context menu or editor title menu to invoke the `Open Preview` command.
 
 ## Theme Support
+
 The extension adapts its display to the current Visual Studio Code theme. For best results, choose a theme with opaque selection background colors.
 
 ![Image](./img/excel-themes-4.gif)
 
 ## Persistent Data
+
 The extension automatically stores user customizations on a per-file, per-workspace basis. For CSV files, this includes column widths, sort/filter criteria, data types, format strings, and scroll bar positions. For Excel files, this includes the selected sheet index, sort/filter criteria, and scroll bar positions associated with that sheet only. If the column structure of a CSV file changes, any persistent data is ignored for that file.
 
 > To discard persistent data for a CSV or Excel file, execute the command `CSV: Clear Preview State`. The preview will be refreshed automatically.
 
 ## Numeric Formatting
+
 By default, numeric formatting is always enabled for CSV files, and the extension will examine the first row of data to determine which columns are numeric. The setting `csv-preview.numberFormat` specifies a [.NET-style format string](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings) that controls the display type and significant digits for all numeric columns. This setting defaults to `g2`, which specifies two significant digits and does not display a thousands separator.
 
 The setting `csv-preview.formatValues` controls how numeric formatting is applied: 
@@ -51,6 +57,7 @@ Value | Description
 > Since data types and format strings are persisted along with other column properties, you may need to run the `CSV: Clear Preview State` command to see the effects of changing the `csv-preview.formatValues` and `csv-preview.numberFormat` options.
 
 ## Configuration
+
 To change the default configuration settings for the Excel Viewer extension, edit the user or workspace settings as described [here](http://code.visualstudio.com/docs/customization/userandworkspace#_creating-user-and-workspace-settings). The available settings, which govern CSV files only, are as follows:
 
 Setting | Type | Default Value | Description
@@ -70,6 +77,7 @@ csv-preview.openStdin | boolean | false | Specifies whether text piped to stdin 
 > Any open CSV previews or custom editors will automatically update to reflect the modified settings, except where noted in the previous section.
 
 ### <a id="regex"></a>Regular Expression Settings
+
 The following configuration settings are used within regular expressions when processing CSV files. Therefore, you need to escape any special regular expression characters with a backslash in order to achieve the desired result.
 
  * `csv-preview.separator`
@@ -105,6 +113,8 @@ Alternatively, to use C# or JavaScript style comments (//), do this:
 `"csv-preview.commentCharacter": "/{2}"`
 
 ## References
-* [About Wijmo](http://www.grapecity.com/wijmo)
-* [FlexGrid API](http://www.grapecity.com/wijmo/api/classes/wijmo_grid.flexgrid.html)
-* [FlexSheet API](http://www.grapecity.com/wijmo/api/classes/wijmo_grid_sheet.flexsheet.html)
+
+* [About Wijmo](https://developer.mescius.com/wijmo)
+* [About JavaScript DataGrid](https://developer.mescius.com/wijmo/flexgrid-javascript-data-grid)
+* [FlexGrid API](https://developer.mescius.com/wijmo/api/classes/wijmo_grid.flexgrid.html)
+* [FlexSheet API](https://developer.mescius.com/wijmo/api/classes/wijmo_grid_sheet.flexsheet.html)
