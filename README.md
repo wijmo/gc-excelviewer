@@ -1,4 +1,4 @@
-# Excel Viewer
+# Excel Viewer for VSCode
 
 Powered by [Wijmo](https://developer.mescius.com/wijmo), this extension provides custom editors and previews for CSV files and Excel spreadsheets in Visual Studio Code and [Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web).
 
