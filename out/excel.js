@@ -146,7 +146,7 @@ function initPage() {
 
 function resizeSheet() {
     var div = wijmo.getElement("#sheet");
-    div.style.height = window.innerHeight.toString() + "px";
+    div.style.height = (window.innerHeight.toString() - 50) + "px";
 }
 
 function cssVar(name, value) {

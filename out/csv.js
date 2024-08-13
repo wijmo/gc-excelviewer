@@ -383,7 +383,7 @@ function parseContent(text) {
 
 function resizeGrid() {
     var div = wijmo.getElement("#flex");
-    div.style.height = window.innerHeight.toString() + "px";
+    div.style.height = (window.innerHeight.toString() - 50) + "px";
 }
 
 function handleEvents() {

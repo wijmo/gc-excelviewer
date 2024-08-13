@@ -242,6 +242,7 @@ export default class CsvDocumentView extends BaseDocumentView {
         <script src="${this.scriptUri}/csv.js"></script>
         <body style="padding:0px; overflow:hidden" onload="resizeGrid()" onresize="resizeGrid()">
             <div id="flex"></div>
+            <div id="aboutWjmo" style="box-sizing: border-box;position:fixed;z-index:10000;bottom:0px;left:0px;right:0px;height:50px;padding-top:10px;background: rgb(90,227,255);background: linear-gradient(129deg, rgba(90,227,255,1) 0%, rgba(5,77,107,1) 100%);color:#000;font-size:18px;text-align:center;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI Light', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">👆 Want to add this DataGrid to your web app? Try <a href="https://developer.mescius.com/wijmo/flexgrid-javascript-data-grid?utm_source=VSCode&utm_medium=Wijmo-Extension" target="_blank" style="color:#fff;text-decoration:none;font-weight:800;">Wijmo FlexGrid</a>!</div>
         </body>
         <script type="text/javascript">
             wijmo.setLicenseKey("${getLicenseKey()}");

@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.2.60 (August 13, 2024)
+Updated Wijmo license. 
+
+Added info bubble for Wijmo FlexGrid.
+
+## 4.2.59 (February 28, 2024)
+Updated Wijmo license. No other changes.
+
 ## 4.2.58 (August 14, 2023)
 Fixed cell editing and row deletion issues for CSV files containing multiline cells.
 
