@@ -1,4 +1,4 @@
-Copyright (c) GrapeCity, Inc.
+Copyright (c) MESCIUS inc.
 
 All rights reserved. 
 
