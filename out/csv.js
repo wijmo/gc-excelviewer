@@ -382,8 +382,21 @@ function parseContent(text) {
 }
 
 function resizeGrid() {
+    const options = getOptions();
     var div = wijmo.getElement("#flex");
-    div.style.height = (window.innerHeight.toString() - 50) + "px";
+    var bubble = document.getElementById("aboutWjmo");
+    var heightOffset = 50;
+    if(bubble){
+        bubble.style.display='';
+    }
+    if(options.showInfo == null || options.showInfo == false)
+    {
+        heightOffset = 0;
+        if(bubble){
+            bubble.style.display='none';
+        }
+    }
+    div.style.height = (window.innerHeight - heightOffset).toString() + "px";
 }
 
 function handleEvents() {

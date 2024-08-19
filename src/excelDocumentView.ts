@@ -23,12 +23,15 @@ export default class ExcelDocumentView extends BaseDocumentView {
         return preview;
     }
 
-    public getOptions(): any {
+    public getOptions(): any {    
+        let viewerConfig = workspace.getConfiguration('excel-viewer');
+
         return {
             customEditor: this.hasCustomEditor,
             uri: this.uri.toString(),
             previewUri: this.previewUri.toString(),
-            state: this.state
+            state: this.state,
+            showInfo: <boolean>viewerConfig.get("showInfo")
         };
     }
 

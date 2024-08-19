@@ -2,7 +2,7 @@
     "name": "gc-excelviewer",
     "displayName": "Excel Viewer",
     "description": "Edit Excel spreadsheets and CSV files in Visual Studio Code and VS Code for the Web.",
-    "version": "4.2.60",
+    "version": "4.2.61",
     "icon": "img/gc-excelviewer.png",
     "publisher": "GrapeCity",
     "license": "SEE LICENSE IN LICENSE.txt",
@@ -288,6 +288,11 @@
             "type": "object",
             "title": "Excel Viewer",
             "properties": {
+                "excel-viewer.showInfo": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specifies whether an information bubble will be shown under the preview window. The information describes which DataGrid is used in this extensions and links to more information."
+                },
                 "csv-preview.separator": {
                     "type": "string",
                     "default": ",",

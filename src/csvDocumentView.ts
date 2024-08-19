@@ -34,6 +34,7 @@ export default class CsvDocumentView extends BaseDocumentView {
 	public getOptions(): any {
         let self = this;
 		let config = workspace.getConfiguration('csv-preview');
+        let viewerConfig = workspace.getConfiguration('excel-viewer');
         let sep = <string>config.get("separator");
         let lang = this.languageId;
         if (!lang) {
@@ -77,7 +78,8 @@ export default class CsvDocumentView extends BaseDocumentView {
             customEditor: this.hasCustomEditor,
             uri: this.uri.toString(),
             previewUri: this.previewUri.toString(),
-            state: this.state
+            state: this.state,
+            showInfo: <boolean>viewerConfig.get("showInfo")
         };
 	}
 

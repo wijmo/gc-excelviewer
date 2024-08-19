@@ -1,7 +1,10 @@
 # Change Log
 
+## 4.2.61 (August 19, 2024)
+Added configuration setting to show or hide info bubble for Wijmo FlexGrid.
+
 ## 4.2.60 (August 13, 2024)
-Updated Wijmo license. 
+Updated Wijmo license.
 
 Added info bubble for Wijmo FlexGrid.
 
