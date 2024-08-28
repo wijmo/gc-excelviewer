@@ -148,7 +148,7 @@ function resizeSheet() {
     const options = getOptions();
     var div = wijmo.getElement("#sheet");
     var bubble = document.getElementById("aboutWjmo");
-    var heightOffset = 50;
+    var heightOffset = 25;
     if(bubble){
         bubble.style.display='';
     }
