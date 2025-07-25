@@ -59,7 +59,7 @@ function initPage() {
         }
         return false;
     }
-    
+
     function applyState() {
         if (ignoreState()) return;
         var json = vscode.getState() || options.state;
@@ -73,7 +73,7 @@ function initPage() {
             if (json.scrollPosition) {
                 flex.scrollPosition = json.scrollPosition;
             }
-        }    
+        }
     }
 
     var needRowResize = false;
@@ -308,7 +308,7 @@ function parseContent(text) {
             regexItems = new RegExp(`${sep}(?=(?:[^${quote}]*${quote}[^${quote}]*${quote})*[^${quote}]*$)`);
             sendMessage({
                 separator: sep
-            });    
+            });
         }
         return result;
     }
@@ -412,5 +412,5 @@ function handleEvents() {
             flex.itemsSource = content.data;
             flex.endUpdate();
         }
-    });   
+    });
 }
