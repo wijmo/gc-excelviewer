@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.2.64 (August 15, 2025)
+Updated Wijmo license.
+
+## 4.2.63 (April 2, 2025)
+Updated Wijmo license.
+
 ## 4.2.62 (August 28, 2024)
 Redesigned info bubble based on customer feedback.
 
@@ -359,3 +365,4 @@ Added enumerated values for the `csv-preview.theme` configuration option.
 Fixed local path issues that prevented Excel files from being opened on Windows. If you downloaded an earlier version, please upgrade to version 1.0.5 or later.
 
 @kmp1 added the configuration option `csv-preview.separator` that lets you specify the separator used when reading CSV files (default: comma).
+
