@@ -1,10 +1,14 @@
-# Excel Viewer for VSCode
+# Spreadsheet Viewer for VSCode
 
-Powered by [Wijmo](https://developer.mescius.com/wijmo), this extension provides custom editors and previews for CSV files and Excel spreadsheets in Visual Studio Code and [Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web).
+***
+**This extension is no longer actively maintained. For an enhanced spreadsheet editing experience in VSCode, we recommend using the [SpreasJS XLSX Editor](https://marketplace.visualstudio.com/items?itemName=Mescius.spreadjs-xlsx-editor), powered by [SpreadJS](https://developer.mescius.com/spreadjs).**
+***
+
+Powered by [Wijmo](https://developer.mescius.com/wijmo), this extension provides custom editors and previews for CSV files and XLSX spreadsheets in Visual Studio Code and [Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web).
 
 > **Version 4.2.58 fixes many CSV editing issues that occurred in files containing multiline cells.**
 
-Version 4.2 now supports first-class **custom editors** that implement operations such as save, undo, redo, and hot exit. For Excel files, this is the default, and clicking the name of an Excel file in explorer view opens the custom editor directly. For CSV files, this is optional, and executing the `Open With` command on the context menu prompts for the built-in or custom editor to be opened. The `Open Preview` command is still supported for both file types.
+Version 4.2 now supports first-class **custom editors** that implement operations such as save, undo, redo, and hot exit. For XLSX files, this is the default, and clicking the name of an XLSX file in explorer view opens the custom editor directly. For CSV files, this is optional, and executing the `Open With` command on the context menu prompts for the built-in or custom editor to be opened. The `Open Preview` command is still supported for both file types.
 
 Version 4.2 also supports **Visual Studio Code for the Web**. To get started, visit [https://vscode.dev](https://vscode.dev) in your browser.
 
@@ -22,7 +26,7 @@ For .tsv and .tab files, a tab delimiter is assumed. For plain text files with d
 
 To sort a column in ascending order, click its column header. To reverse the sort order, click its column header again. To specify a secondary sort column, hold the `Shift` key while clicking its column header. To undo sorting for a column, hold the `Ctrl` key while clicking its column header. Alternatively, you can use the `CSV: Clear Preview State` command to remove all sort/filter criteria for the current file.
 
-## Excel Usage
+## XLSX Usage
 
 For files with an .xlsx or .xlsm extension, just click (or double-click) the filename in explorer view. The contents of the file will be displayed in a [FlexSheet](https://developer.mescius.com/wijmo/demos/Grid/FlexSheet/ExcelImportExport/purejs) control. If multiple sheets are present, use the controls at the bottom of the view for navigation.
 
@@ -38,9 +42,9 @@ The extension adapts its display to the current Visual Studio Code theme. For be
 
 ## Persistent Data
 
-The extension automatically stores user customizations on a per-file, per-workspace basis. For CSV files, this includes column widths, sort/filter criteria, data types, format strings, and scroll bar positions. For Excel files, this includes the selected sheet index, sort/filter criteria, and scroll bar positions associated with that sheet only. If the column structure of a CSV file changes, any persistent data is ignored for that file.
+The extension automatically stores user customizations on a per-file, per-workspace basis. For CSV files, this includes column widths, sort/filter criteria, data types, format strings, and scroll bar positions. For XLSX files, this includes the selected sheet index, sort/filter criteria, and scroll bar positions associated with that sheet only. If the column structure of a CSV file changes, any persistent data is ignored for that file.
 
-> To discard persistent data for a CSV or Excel file, execute the command `CSV: Clear Preview State`. The preview will be refreshed automatically.
+> To discard persistent data for a CSV or XLSX file, execute the command `CSV: Clear Preview State`. The preview will be refreshed automatically.
 
 ## Numeric Formatting
 
@@ -58,7 +62,7 @@ Value | Description
 
 ## Configuration
 
-To change the default configuration settings for the Excel Viewer extension, edit the user or workspace settings as described [here](http://code.visualstudio.com/docs/customization/userandworkspace#_creating-user-and-workspace-settings). The available settings, which govern CSV files only, are as follows:
+To change the default configuration settings for the Spreadsheet Viewer extension, edit the user or workspace settings as described [here](http://code.visualstudio.com/docs/customization/userandworkspace#_creating-user-and-workspace-settings). The available settings, which govern CSV files only, are as follows:
 
 Setting | Type | Default Value | Description
 ------- | ---- | ------------- | -----------

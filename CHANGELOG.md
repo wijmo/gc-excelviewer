@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.2.66 (June 4, 2026)
+Updated README with new content and updated plugin name.
+
+## 4.2.65 (March 17, 2025)
+Updated Wijmo license.
+
 ## 4.2.64 (August 15, 2025)
 Updated Wijmo license.
 
