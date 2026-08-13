@@ -17,6 +17,7 @@ function initPage() {
     });
 
     var filter = new wijmo.grid.filter.FlexGridFilter(flex);
+    var updateSelectionStatistics = SelectionStatistics.bind(flex, "selectionStatistics");
 
     function getState() {
         var state = {
@@ -107,6 +108,7 @@ function initPage() {
         }
         autoSizeVisibleRows(flex, true);
         preserveState();
+        updateSelectionStatistics();
         if (flex.collectionView) {
             flex.collectionView.collectionChanged.addHandler(() => {
                 preserveState();
@@ -210,6 +212,7 @@ function initPage() {
 
     flex.cellEditEnded.addHandler(function(s, e) {
         cellEditEnded(s, e);
+        updateSelectionStatistics();
     });
 
     flex.pastedCell.addHandler(function(s, e) {
@@ -385,17 +388,17 @@ function resizeGrid() {
     const options = getOptions();
     var div = wijmo.getElement("#flex");
     var bubble = document.getElementById("aboutWjmo");
-    var heightOffset = 25;
+    var statusBar = document.getElementById("viewerStatusBar");
     if(bubble){
         bubble.style.display='';
     }
     if(options.showInfo == null || options.showInfo == false)
     {
-        heightOffset = 0;
         if(bubble){
             bubble.style.display='none';
         }
     }
+    var heightOffset = statusBar ? statusBar.offsetHeight : 28;
     div.style.height = (window.innerHeight - heightOffset).toString() + "px";
 }
 

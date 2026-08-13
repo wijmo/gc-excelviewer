@@ -6,6 +6,8 @@
 
 Powered by [Wijmo](https://developer.mescius.com/wijmo), this extension provides custom editors and previews for CSV files and XLSX spreadsheets in Visual Studio Code and [Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web).
 
+The viewer includes an Excel-like status bar that automatically shows the average, non-empty count, numeric count, sample standard deviation (`STDEV.S`), minimum, maximum, and sum for the current selection in both CSV and XLSX views.
+
 > **Version 4.2.58 fixes many CSV editing issues that occurred in files containing multiline cells.**
 
 Version 4.2 now supports first-class **custom editors** that implement operations such as save, undo, redo, and hot exit. For XLSX files, this is the default, and clicking the name of an XLSX file in explorer view opens the custom editor directly. For CSV files, this is optional, and executing the `Open With` command on the context menu prompts for the built-in or custom editor to be opened. The `Open Preview` command is still supported for both file types.

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../out/styles/wijmo.min.css">
+</head>
+<body>
+    <div id="flex" style="width: 600px; height: 240px"></div>
+    <div id="sheet" style="width: 600px; height: 240px"></div>
+    <div id="selectionStatistics" class="selection-statistics">
+        <span data-stat-value="average"></span>
+        <span data-stat-value="count"></span>
+        <span data-stat-value="numericCount"></span>
+        <span data-stat-value="standardDeviation"></span>
+        <span data-stat-value="min"></span>
+        <span data-stat-value="max"></span>
+        <span data-stat-value="sum"></span>
+    </div>
+    <div id="sheetSelectionStatistics">
+        <span data-sheet-stat-value="average"></span>
+        <span data-sheet-stat-value="count"></span>
+        <span data-sheet-stat-value="sum"></span>
+    </div>
+    <script src="../out/controls/wijmo.min.js"></script>
+    <script src="../out/controls/wijmo.input.min.js"></script>
+    <script src="../out/controls/wijmo.grid.min.js"></script>
+    <script src="../out/controls/wijmo.grid.filter.min.js"></script>
+    <script src="../out/controls/wijmo.grid.sheet.min.js"></script>
+    <script src="../out/selection-statistics.js"></script>
+    <script>
+        var flex = new wijmo.grid.FlexGrid("#flex", {
+            itemsSource: [
+                { value: "tct_s" },
+                { value: 164.22 },
+                { value: 165.08 },
+                { value: 154.58 }
+            ]
+        });
+        SelectionStatistics.bind(flex, "selectionStatistics");
+        flex.selection = new wijmo.grid.CellRange(0, 0, 3, 0);
+        var sheet = new wijmo.grid.sheet.FlexSheet("#sheet");
+        sheet.addUnboundSheet("Sheet1", 4, 1);
+        ["tct_s", 164.22, 165.08, 154.58].forEach(function (value, row) {
+            sheet.setCellData(row, 0, value);
+        });
+        sheet.selection = new wijmo.grid.CellRange(0, 0, 3, 0);
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+                var values = {};
+                document.querySelectorAll("[data-stat-value]").forEach(function (item) {
+                    values[item.getAttribute("data-stat-value")] = item.textContent;
+                });
+                document.body.setAttribute("data-selection-statistics", JSON.stringify(values));
+                var sheetStats = SelectionStatistics.calculateGridSelection(sheet);
+                document.body.setAttribute("data-sheet-selection-statistics", JSON.stringify(sheetStats));
+            });
+        });
+    </script>
+</body>
+</html>
