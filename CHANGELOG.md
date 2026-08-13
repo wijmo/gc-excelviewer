@@ -1,5 +1,9 @@
 # Change Log
 
+## Unreleased
+
+Added Excel-like automatic statistics for the current CSV or XLSX selection: average, non-empty count, numeric count, sample standard deviation, minimum, maximum, and sum.
+
 ## 4.2.66 (June 4, 2026)
 Updated README with new content and updated plugin name.
 

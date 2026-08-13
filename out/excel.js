@@ -7,6 +7,7 @@ function initPage() {
 
     var sheet = new wijmo.grid.sheet.FlexSheet("#sheet");
     wijmo.setCss(sheet.hostElement, { "font-family": "" });
+    var updateSelectionStatistics = SelectionStatistics.bind(sheet, "selectionStatistics");
 
     function getState() {
         var sorts = [];
@@ -102,6 +103,7 @@ function initPage() {
         sheet.selectedSheetChanged.addHandler(() => {
             preserveState();
             sheet.autoSizeColumn(0, true);
+            updateSelectionStatistics();
         });
 
         sheet.sortManager.sortDescriptions.collectionChanged.addHandler(() => {
@@ -138,6 +140,7 @@ function initPage() {
                 changed: true,
                 reason: "Cell Edited"
             });
+            updateSelectionStatistics();
         });
     });
     
@@ -148,17 +151,17 @@ function resizeSheet() {
     const options = getOptions();
     var div = wijmo.getElement("#sheet");
     var bubble = document.getElementById("aboutWjmo");
-    var heightOffset = 25;
+    var statusBar = document.getElementById("viewerStatusBar");
     if(bubble){
         bubble.style.display='';
     }
     if(options.showInfo == null || options.showInfo == false)
     {
-        heightOffset = 0;
         if(bubble){
             bubble.style.display='none';
         }
     }
+    var heightOffset = statusBar ? statusBar.offsetHeight : 28;
     div.style.height = (window.innerHeight - heightOffset).toString() + "px";
 }
 
