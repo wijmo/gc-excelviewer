@@ -1,0 +1,4 @@
+Product;Amount;Comment
+Alpha;1,25;Uses comma decimals
+Beta;2,50;
+Gamma;3,75;Semicolon separator

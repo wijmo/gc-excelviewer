@@ -64,7 +64,10 @@ To run the extension from source:
 2. Open the **Run and Debug** view.
 3. Select **Launch Extension** and start debugging.
 
-Sample files for manual testing are under `data/`.
+Sample files for manual testing are under `data/`; see
+[`data/README.md`](data/README.md). They are small synthetic fixtures covering
+normal, multiline, numeric, empty-cell, Unicode, multi-sheet, and XLSM files.
+They contain no customer data.
 
 See [ROADMAP.md](ROADMAP.md) for planned work.
 
