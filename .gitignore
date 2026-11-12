@@ -9,3 +9,6 @@ team-extension.log
 .env
 .env.*
 !.env.example
+
+# Local tool state
+.serena/

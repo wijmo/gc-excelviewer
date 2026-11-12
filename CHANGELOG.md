@@ -15,7 +15,6 @@
 
 - `csv-preview.maxColumnWidth` now applies only to automatic column sizing;
   columns resized manually are not capped.
-- Added GitHub Actions CI for build and test.
 
 ## 1.8.8 (April 20, 2026)
 
@@ -338,7 +337,7 @@ The extension no longer relies upon the Wijmo CDN for external file references. 
 
 When previewing a CSV file, the extension now validates any saved settings (column widths, sort/filter criteria) before applying them. If the number of columns or any individual column binding has changed, then any persistent user data is ignored. This fixes issues where newly added columns were not dislayed unless the `CSV: Clear Preview State` command was first run. This command is still useful for discarding persistent data when the column layout has not changed.
 
-Fixed error: Cannot read property '_freezeHiddenRowCnt' of undefined. 
+Fixed error: Cannot read property '_freezeHiddenRowCnt' of undefined.
 
 Upgraded to use Wijmo build 5.20173.380.
 

@@ -1,3 +1,0 @@
-# CHANGELOG.md uses CRLF line endings. Treat CR-at-EOL as valid rather than
-# as trailing whitespace in `git diff --check`.
-CHANGELOG.md whitespace=cr-at-eol
