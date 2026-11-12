@@ -1,5 +1,12 @@
 # User-Centric Analysis: CSV & Excel Viewer Extension
 
+> **Historical document.** This analysis was committed on 2026-06-15 and is kept
+> as input for future planning, not as a statement of current behavior or
+> committed project direction. Multi-column sorting and the CSV status bar have
+> since shipped (versions 1.9.0 and 1.8.8 respectively). The monetization
+> discussion is speculative and is not a committed plan. See
+> [ROADMAP.md](../../../ROADMAP.md) for the current planned work.
+
 ## What I asked
 Think as a user: what's there that can be better, what's missing, what would I pay for.
 
@@ -32,9 +39,9 @@ CSV has 12 config options. Excel has 1 (`showInfo`). Excel users have zero contr
 No "export to Excel", no "copy filtered as Markdown table", no "export current sheet only". One format, no options.
 **Fix:** Export menu with: CSV, TSV, Markdown table, JSON array.
 
-### 6. No status bar info for CSV
-Excel shows an info bar (rows/cols/sheet). CSV shows nothing outside the grid. Users scroll to bottom to see total row count.
-**Fix:** VS Code status bar contribution showing row count, column count, selected cell value.
+### 6. No status bar info for CSV — *addressed*
+Excel shows an info bar (rows/cols/sheet). At the time of writing, CSV showed nothing outside the grid, so users scrolled to the bottom to see the total row count.
+**Fix:** VS Code status bar contribution showing row count, column count, selected cell value. *(A status bar showing row counts and preview actions shipped in 1.8.8.)*
 
 ---
 
@@ -52,8 +59,8 @@ This is THE feature data engineers and analysts want. It's why people use tools 
 ### 8. Find & Replace
 Ctrl+F only finds. No replace. For CSV editing this is a massive gap — renaming a category value across 10,000 rows requires an external tool.
 
-### 9. Multi-column sort
-Currently clicking a second column header replaces the first sort. Users expect Shift+click to add a secondary sort key. AG Grid Community supports this natively.
+### 9. Multi-column sort — *addressed*
+At the time of writing, clicking a second column header replaced the first sort. Users expect Shift+click to add a secondary sort key. AG Grid Community supports this natively. *(Shift+click multi-column sorting shipped in 1.9.0.)*
 
 ### 10. Diff/compare mode
 Open two CSV/Excel files side by side and highlight rows that differ. Common use case: "what changed in this report vs. last week's?" Zero tools in VS Code do this well.
@@ -73,6 +80,9 @@ No pagination, no chunked loading. A 500MB CSV will bring AG Grid to its knees. 
 ---
 
 ## What I would pay for
+
+> Speculative discussion only. Nothing in this section is a committed pricing,
+> licensing, or monetization plan.
 
 | Feature | Willingness to pay | Why |
 |---|---|---|
