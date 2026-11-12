@@ -4,3 +4,8 @@ dist
 *.vsix
 team-extension.log
 .vscode-test-web
+
+# Local environment files (keep the example file if one is added)
+.env
+.env.*
+!.env.example

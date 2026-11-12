@@ -5,7 +5,7 @@
     "version": "1.9.0",
     "icon": "img/csv-excel-viewer.png",
     "publisher": "Development42",
-    "license": "SEE LICENSE IN LICENSE.txt",
+    "license": "MIT",
     "galleryBanner": {
         "color": "#7092BE",
         "theme": "dark"
