@@ -42,5 +42,7 @@ finding:
 ```
 
 This does not disable the `generic-api-key` rule and does not suppress findings
-in other files, commits, or lines. With this allowlist, the scan exits 0 with
+in other files, commits, or lines. A control test using synthetic
+`generic-api-key` findings in a separate repository still reported all of them
+when pointed at this ignore file. With this allowlist, the scan exits 0 with
 zero unresolved findings.
